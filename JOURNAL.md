@@ -5,7 +5,7 @@ description: "A portable tool for techies to check XLR cables."
 created_at: "2025-06-22"
 ---
 
-# June 23rd: Initial conception and part sourcing.
+# 23rd June: Initial conception and part sourcing.
 
 Initial conception of the idea: an easy way for theatre techs to check whether xlr cables work.
 
@@ -36,7 +36,7 @@ Josh
 
 **Total time spent: 2h**
 
-# June 25th: Finalising BOM and starting Wiring/Modelling
+# 25th June: Finalising BOM and starting Wiring/Modelling
 
 This is my updated parts list:
 
@@ -62,3 +62,12 @@ Thanks for following along,
 Josh
 
 **Total time spent: 5h**
+
+# 9th July: Schematic editing and firmware
+Ok a lot to cover in this one, I've been busy for the last week, and so have been unable to get around to this project. But the day til highway ends draws near, so this project needs an update.
+I decided to make a start on the firmware, the majority if my time was spent figuring out how to use Espressif's IDF with CLion, and the rest on working out how to interface with the ES8388 using espressif/esp_codec_dev, a very poorly documented library. Despite all this I have made a definite start, with more to follow in the morning.
+Most of the parts I'm using don't have KiCad symbols or footprints available, however, thanks to the [symbol design guide](https://highway.hackclub.com/guides/symbol-design), I have been able to push through and finally lay down a rough plan for wiring (we'll see how I go).
+
+!(KiCad Schematic)[https://hc-cdn.hel1.your-objectstorage.com/s/v3/b071340b75857397ee74b12427548386edf4560e_screenshot_2025-07-09_at_9.54.52___pm.png]
+
+**Total time spent: 7h**

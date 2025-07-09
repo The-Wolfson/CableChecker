@@ -1,9 +1,13 @@
-Part,SKU,Model,Quantity,Price,Shipping,Link
-Audio Module,PCBA2103,ES8388,1, $26.99 , $12.40 ,https://pcbartists.com/product/es8388-module/
-Audio Transformer,,ED8,2, $5.84 , $2.50 ,https://www.aliexpress.com/i/1005002450695711.html
-XLR3 Male,NC3MAAV,XLR3,1, $1.74 , $3.98 ,https://www.aliexpress.com/item/1005003251181647.html
-XLR3 Female,NC3FAAV,XLR3,1, $1.74 , ' ,https://www.aliexpress.com/item/1005003251181647.html
-Microcontroller,WS-25081,ESP32-S3,1, $9.30 , $-   ,https://core-electronics.com.au/esp32-s3-mini-development-board-retired.html
-Rotary Encoder w/ Button,ADA377,PEC11,1, $9.95 , ' ,https://core-electronics.com.au/rotary-encoder-extras.html
-LED Bar Graph,ADA1718,KWL-R1230XDUGB,2, $8.50 , ' ,https://core-electronics.com.au/bi-color-red-green-12-led-bargraph-pack-of-2.html
-Total (AUD),,,, $64.06 , $82.94 ,
+Part,SKU,Model,Quantity, Price , Shipping ,Link,Width (mm),Length (mm),Top Surface Area (mm),Bottom Surface Area (mm)
+Audio Transformer,C48357,HR610660,2, $3.84 , $18.15 ,https://lcsc.com/product-detail/Audio-Transformers_HANRUN-Zhongshan-HanRun-Elec-HR610660_C48357.html,8.89,13,,231.14
+Audio Module,,ES8388,1, $1.57 , ' ,https://lcsc.com/product-detail/ADCs-DACs-Special-Purpose_Everest-semi-Everest-Semiconductor-ES8388_C365736.html,4,4,16,
+XLR3 Male,NC3MAAH,XLR3,1, $2.41 ,  '  ,https://lcsc.com/product-detail/XLR-Cannon-Connectors_Neutrik-NC3MAAH_C368463.html,18.5,19.8,366.3,
+XLR3 Female,NC3FAAH,XLR3,1, $2.43 ,  '  ,https://lcsc.com/product-detail/XLR-Cannon-Connectors_Neutrik-NC3FAAH_C368521.html,19.5,19.8,386.1,
+Microcontroller,WS-25081,ESP32-S3-Zero,1, $9.30 , $-   ,https://core-electronics.com.au/esp32-s3-mini-development-board-retired.html,18,23.5,423,
+Audio Jack,PRT-08032,,1, $3.30 ,  '  ,https://core-electronics.com.au/audio-jack-3-5mm.html,12,11,,132
+Rotary Encoder w/ Button,ADA377,PEC11-4215F-S24,1, $9.95 ,  '  ,https://core-electronics.com.au/rotary-encoder-extras.html,12.5,13.2,,165
+Charger,CE08374,,1, $6.50 ,  '  ,https://core-electronics.com.au/makerverse-usb-c-lipo-charger.html,20.9,34.4,,718.96
+Battery,CE04375,,1, $7.30 ,  '  ,https://core-electronics.com.au/polymer-lithium-ion-battery-1000mah-38458.html,38,25,950,
+LED Bar Graph,CE08035,WS2812B,1, $4.90 ,  '  ,https://core-electronics.com.au/glowbit-stick-1x8.html,9.2,54.8,,504.16
+Total (AUD),,,, $51.50 , $69.65 ,,,,2141.4,1751.26
+,,,,,,,,,,3000
