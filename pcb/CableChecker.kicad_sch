@@ -2852,6 +2852,220 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Switch:SW_SP3T"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_SP3T"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -15.875 4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Switch, three position, single pole triple throw, 3 position switch, SP3T"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch sp3t ON-ON-ON"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SW* SP3T*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_SP3T_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.651 0.254) (xy 1.651 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 -2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_SP3T_1_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "easyeda2kicad:HR610660"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4216,6 +4430,28 @@
 			)
 		)
 	)
+	(global_label "SW-2"
+		(shape input)
+		(at 205.74 128.27 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6165ad9f-97b8-4015-a604-22361f842823")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 214.168 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Tip"
 		(shape input)
 		(at 82.55 54.61 0)
@@ -4348,6 +4584,28 @@
 			)
 		)
 	)
+	(global_label "SW-1"
+		(shape input)
+		(at 170.18 92.71 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "97cc8c84-3188-4da7-b632-4d699d81bf4b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.752 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "LRCK"
 		(shape input)
 		(at 195.58 74.93 0)
@@ -4432,6 +4690,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SW-3"
+		(shape input)
+		(at 170.18 87.63 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b39d8828-249f-41e7-a3a6-2d1706e2c8b0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.752 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -4568,6 +4848,28 @@
 			)
 		)
 	)
+	(global_label "SW-2"
+		(shape input)
+		(at 170.18 90.17 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e81ba401-d9a9-4119-9f1e-f2c70d835970")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.752 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "MCLK"
 		(shape input)
 		(at 170.18 67.31 180)
@@ -4581,6 +4883,28 @@
 		(uuid "e9a9fca8-1727-4f5f-a91b-d65ee057bfb3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 162.1753 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SW-1"
+		(shape input)
+		(at 195.58 128.27 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e9e23b54-4ee4-4868-b12a-755f06591942")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 187.152 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4608,6 +4932,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SW-3"
+		(shape input)
+		(at 195.58 130.81 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f7f03ee1-ce5a-401b-b948-dc0c365d2feb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 187.152 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -4666,7 +5012,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "002610d3-b70f-4b6a-bef7-ef8a8449f969")
-		(property "Reference" "U2"
+		(property "Reference" "LED1"
 			(at 245.11 102.2349 90)
 			(effects
 				(font
@@ -4684,7 +5030,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:GlowbitL_LED_Strip_1x8"
 			(at 241.3 101.6 0)
 			(effects
 				(font
@@ -4726,7 +5072,7 @@
 		(instances
 			(project ""
 				(path "/a14f0a3f-0cd5-49d0-ba49-aaf65e3739c4"
-					(reference "U2")
+					(reference "LED1")
 					(unit 1)
 				)
 			)
@@ -5431,7 +5777,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "52fdb3c5-a509-4edc-b32f-1365eae47c28")
-		(property "Reference" "U3"
+		(property "Reference" "Charger1"
 			(at 240.665 113.03 0)
 			(effects
 				(font
@@ -5489,7 +5835,7 @@
 		(instances
 			(project ""
 				(path "/a14f0a3f-0cd5-49d0-ba49-aaf65e3739c4"
-					(reference "U3")
+					(reference "Charger1")
 					(unit 1)
 				)
 			)
@@ -7357,6 +7703,148 @@
 			(project ""
 				(path "/a14f0a3f-0cd5-49d0-ba49-aaf65e3739c4"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_SP3T")
+		(at 200.66 128.27 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d364b302-69b6-445f-860a-b68eb69179cd")
+		(property "Reference" "SW2"
+			(at 200.66 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_SP3T"
+			(at 200.66 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "easyeda2kicad:SW-TH_SK13D07VG5"
+			(at 216.535 123.825 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 200.66 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Switch, three position, single pole triple throw, 3 position switch, SP3T"
+			(at 200.66 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b9b02fbf-b083-4a32-b952-a24752ccb88f")
+		)
+		(pin "1"
+			(uuid "4071fe9e-fee8-4c00-b57a-a3816428f3f1")
+		)
+		(pin "3"
+			(uuid "b4383828-5805-40ad-9140-7f087d75cfe0")
+		)
+		(pin "4"
+			(uuid "1a0c2104-da03-4e21-8f38-18ca3b7f701f")
+		)
+		(instances
+			(project ""
+				(path "/a14f0a3f-0cd5-49d0-ba49-aaf65e3739c4"
+					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 195.58 125.73 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d6739d83-cd4f-4913-8692-2c35f8340a9c")
+		(property "Reference" "#PWR029"
+			(at 189.23 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 191.77 125.7299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 195.58 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 195.58 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cc4d8475-c312-4626-b7c1-545fe2f2ae8f")
+		)
+		(instances
+			(project "CableChecker"
+				(path "/a14f0a3f-0cd5-49d0-ba49-aaf65e3739c4"
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)

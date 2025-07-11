@@ -6,19 +6,21 @@
 #define DEFINITIONS_H
 // ES8388
 ///I2C
-#define MCLK                1
-#define CCLK                2
-#define CDATA               3
+#define CCLK                2 //SCL
+#define CDATA               3 //SDA
 #define CE                  4
 ///I2S
-#define ASDOUT              10
-#define LRCK                9
-#define DSDIN               8
-#define SCLK                7
+#define MCLK                1
+#define ASDOUT              10 //DOUT
+#define LRCK                9 //WS
+#define DSDIN               8 //DIN
+#define SCLK                7 //BCLK
 
 //GlowBit
 #define LED_DIN             39
 #define LED_COUNT           8
+
+#define MODE_LED_INDEX      0
 
 //Headphone Jack
 #define RSH                 11
@@ -29,3 +31,8 @@
 #define ROTARY_CLK          17
 #define ROTARY_SW           38
 #endif //DEFINITIONS_H
+
+//SP3T
+#define SP3T_A              40
+#define SP3T_B              41
+#define SP3T_C              42
