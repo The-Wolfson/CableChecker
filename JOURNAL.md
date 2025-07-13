@@ -68,6 +68,17 @@ Ok a lot to cover in this one, I've been busy for the last week, and so have bee
 I decided to make a start on the firmware, the majority if my time was spent figuring out how to use Espressif's IDF with CLion, and the rest on working out how to interface with the ES8388 using espressif/esp_codec_dev, a very poorly documented library. Despite all this I have made a definite start, with more to follow in the morning.
 Most of the parts I'm using don't have KiCad symbols or footprints available, however, thanks to the [symbol design guide](https://highway.hackclub.com/guides/symbol-design), I have been able to push through and finally lay down a rough plan for wiring (we'll see how I go).
 
-!(KiCad Schematic)[https://hc-cdn.hel1.your-objectstorage.com/s/v3/b071340b75857397ee74b12427548386edf4560e_screenshot_2025-07-09_at_9.54.52___pm.png]
+![KiCad Schematic](https://hc-cdn.hel1.your-objectstorage.com/s/v3/b071340b75857397ee74b12427548386edf4560e_screenshot_2025-07-09_at_9.54.52___pm.png)
 
 **Total time spent: 7h**
+
+# 13th July Finished hardware.
+I'm probably not keeping this thing as updated as i should... After wrestling with ESP-IDF and ESP-ADF for days on end, I decided to switch tracks and finish the hardware. And along the way i made some pretty drastic changes; the BOM has changed, the materials have changed, the design has changed. But it's for the best as I'm now 96% done with the hardware, and the bones of the firmware have been laid out. I still need to figure out how to attach the 4 parts of my case together (heat insets? snap joints?).
+With that (short) update,
+I'm for bed.
+Happy coding :}
+
+![PCB](https://hc-cdn.hel1.your-objectstorage.com/s/v3/82c8813a936d989391e9b1fd9b8a1a7aa66b8289_screenshot_2025-07-13_at_10.50.01___pm.png)
+![3D Render](https://hc-cdn.hel1.your-objectstorage.com/s/v3/5598b6b83e04d97bdfe38903faa6e277f57bc40e_screenshot_2025-07-13_at_10.54.46___pm.png)
+
+**Total time spent: 15h**
