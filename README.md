@@ -28,12 +28,13 @@ When in output mode, the knob is used for volume.
 | Microcontroller | ESP32-S3-Zero | 1 | $6.10 | Free | [Link](https://core-electronics.com.au/esp32-s3-mini-development-board-retired.html) |
 | Rotary Encoder w/ Button | PEC11-4215F-S24 | 1 | $6.53 | '' | [Link](https://core-electronics.com.au/rotary-encoder-extras.html) |
 | LED Bar Graph | WS2812B | 1 | $3.22 | '' | [Link](https://core-electronics.com.au/glowbit-stick-1x8.html) |
-| PCB (JLCPCB) | - | 1 | $2.92 | $16.59 AUD | [Link](Link) |
-| Case (JLC3DP) | - | 1 | $2.92 | '' | [Link](Link) |
+| PCB (JLCPCB) | - | 5 | $5.4 | $16.59 AUD | [Link](https://jlcpcb.com) |
+| PCB Assembly (for ES8388) | - | 2 | $15.40 | $16.59 AUD | [Link](https://jlcpcb.com) |
+| Case (JLC3DP) | - | 1 | $14.88 | '' | [Link](https://jlc3dp.com) |
 
-**AUD Total:** $76.21
+**AUD Total:** $121.95
 
-**USD Total:** $50.01
+**USD Total:** $80.08
 
 ## Background
 I run sound at my school, and we have a legacy system, set up who knows how many years ago. As part of that, there are lots of XLR3 cables lying around that nobody knows if they work, or not.
