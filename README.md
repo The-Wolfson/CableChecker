@@ -41,3 +41,8 @@ I run sound at my school, and we have a legacy system, set up who knows how many
 The solution to my problem, a small portable device that tests if the XLR cable is functioning properly. THis exists... for around $350 AUD. 
 
 So, when I heard about Hackclub's *Highway* YSWS, my mind immediately jumped to this.
+![Case](screenshots/case)
+![PCB](screenshots/pcb)
+![Schematic](screenshots/schematic)
+![Case Assembly](screenshots/case-exploded)
+
