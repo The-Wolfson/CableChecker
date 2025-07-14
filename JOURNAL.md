@@ -5,6 +5,8 @@ description: "A portable tool for techies to check XLR cables."
 created_at: "2025-06-22"
 ---
 
+**Total Time:** 35 hours
+
 # 23rd June: Initial conception and part sourcing.
 
 Initial conception of the idea: an easy way for theatre techs to check whether xlr cables work.
@@ -72,7 +74,7 @@ Most of the parts I'm using don't have KiCad symbols or footprints available, ho
 
 **Total time spent: 7h**
 
-# 13th July Finished hardware.
+# 13th July: Finished hardware.
 I'm probably not keeping this thing as updated as i should... After wrestling with ESP-IDF and ESP-ADF for days on end, I decided to switch tracks and finish the hardware. And along the way i made some pretty drastic changes; the BOM has changed, the materials have changed, the design has changed. But it's for the best as I'm now 96% done with the hardware, and the bones of the firmware have been laid out. I still need to figure out how to attach the 4 parts of my case together (heat insets? snap joints?).
 With that (short) update,
 I'm for bed.
@@ -82,3 +84,14 @@ Happy coding :}
 ![3D Render](https://hc-cdn.hel1.your-objectstorage.com/s/v3/5598b6b83e04d97bdfe38903faa6e277f57bc40e_screenshot_2025-07-13_at_10.54.46___pm.png)
 
 **Total time spent: 15h**
+
+# 14th July: I'm done! (theoretically)
+I've finished the case, the PCB, and the firmware. While the firmware isn't polished, it's enough for an MVP (and it will be a lot easier to see what's working when I have it in my hands). One thing that I will have to check with the Hackclub crew, is am I allowed to pay for JLCPCB to put the ES8388 chip on the board, they offer it as a service and I, as a beginner, am not confident in my prowess with a soldering iron.
+
+I am using 4 M2 bolts to hold the case together (with the help of some superglue), and 2 M1.6 bolts, these shouldn't be hard to source as there is a hardware shop down the road.
+
+I have written a README.MD, and exported my pcb and case. I'm off to submit and hopefully the next time I'm writing in this, I'll have a PCB and some components to assemble.
+It's been an interesting journey,
+Happy Coding ;}
+
+**Total time spent: 5h**
