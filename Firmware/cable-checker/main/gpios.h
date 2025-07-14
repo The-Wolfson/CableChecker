@@ -19,9 +19,10 @@
 #define ROTARY_DT           18
 #define ROTARY_CLK          17
 #define ROTARY_SW           38
-#endif //DEFINITIONS_H
 
 //SP3T
 #define SP3T_A              40
 #define SP3T_B              41
 #define SP3T_C              42
+
+#endif //DEFINITIONS_H

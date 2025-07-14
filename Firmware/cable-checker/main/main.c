@@ -1,16 +1,19 @@
+#include <sys/param.h>
+
 #include "audio_pipeline.h"
+#include "board.h"
 #include "led_strip.h"
 #include "button_gpio.h"
-#include "es8388.h"
-#include "es8388_codec.h"
-#include "esp_audio.h"
 #include "esp_log.h"
 #include "gpios.h"
 #include "i2s_stream.h"
 #include "iot_button.h"
 #include "led_strip_interface.h"
+#include "raw_stream.h"
 #include "driver/pulse_cnt.h"
+#include "wav_decoder.h"
 #include "audio/short_test.h"
+#include "es8388.h"
 
 typedef enum {
     MODE_PLAY,
@@ -46,9 +49,111 @@ void flash_leds() {
 
     led_strip_clear(led_strip);
 }
-void play_test() {
-    esp_audio_play(, AUDIO_CODEC_TYPE_DECODER, "file://main/audio/short_test.wav", 0);
+
+bool compare_audio_buffers(char *buf1, char *buf2, size_t len, int threshold) {
+    int diff_count = 0;
+    for (int i = 0; i < len; i++) {
+        if (abs(buf1[i] - buf2[i]) > threshold) {
+            diff_count++;
+        }
+    }
+    return diff_count < (len / 10); // Arbitrary threshold
 }
+
+void play_test() {
+    audio_board_handle_t board_handle = audio_board_init();
+    audio_hal_ctrl_codec(board_handle->audio_hal, AUDIO_HAL_CODEC_MODE_BOTH, AUDIO_HAL_CTRL_START);
+
+    es_adc_input_t input = ADC_INPUT_MIC1;
+    es8388_config_adc_input(input);
+    es_dac_output_t output = DAC_OUTPUT_LOUT1;
+    es8388_config_dac_output(output);
+
+    // ----- Playback pipeline -----
+    audio_pipeline_cfg_t pipeline_cfg = DEFAULT_AUDIO_PIPELINE_CONFIG();
+    audio_pipeline_handle_t pipeline_play = audio_pipeline_init(&pipeline_cfg);
+    audio_pipeline_handle_t pipeline_record = audio_pipeline_init(&pipeline_cfg);
+
+    // raw stream from memory
+    raw_stream_cfg_t raw_cfg_mem = RAW_STREAM_CFG_DEFAULT();
+    raw_cfg_mem.type = AUDIO_STREAM_READER;
+    audio_element_handle_t raw_reader_mem = raw_stream_init(&raw_cfg_mem);
+
+    // WAV decoder
+    audio_element_handle_t wav_decoder = wav_decoder_init(NULL);
+
+    // I2S writer to ES8388 DAC
+    i2s_stream_cfg_t i2s_cfg = I2S_STREAM_CFG_DEFAULT();
+    i2s_cfg.type = AUDIO_STREAM_WRITER;
+    audio_element_handle_t i2s_writer = i2s_stream_init(&i2s_cfg);
+
+    audio_pipeline_register(pipeline_play, raw_reader_mem, "raw_mem");
+    audio_pipeline_register(pipeline_play, wav_decoder, "wav");
+    audio_pipeline_register(pipeline_play, i2s_writer, "i2s_writer");
+    audio_pipeline_link(pipeline_play, (const char *[]){"raw_mem", "wav", "i2s_writer"}, 3);
+
+    // ----- Record pipeline -----
+    raw_stream_cfg_t raw_cfg_in = RAW_STREAM_CFG_DEFAULT();
+    raw_cfg_in.type = AUDIO_STREAM_READER;
+    audio_element_handle_t raw_reader_in = raw_stream_init(&raw_cfg_in);
+
+    i2s_cfg.type = AUDIO_STREAM_READER;
+    audio_element_handle_t i2s_reader = i2s_stream_init(&i2s_cfg);
+
+    audio_pipeline_register(pipeline_record, i2s_reader, "i2s_reader");
+    audio_pipeline_register(pipeline_record, raw_reader_in, "raw_in");
+    audio_pipeline_link(pipeline_record, (const char *[]){"i2s_reader", "raw_in"}, 2);
+
+    // Start both pipelines
+    audio_pipeline_run(pipeline_play);
+    audio_pipeline_run(pipeline_record);
+
+    // Feed memory buffer to playback pipeline manually
+    int sent = 0;
+    char record_buf[short_test_wav_len];
+
+    while (sent < short_test_wav_len) {
+        int chunk = MIN(short_test_wav_len, short_test_wav_len - sent);
+        raw_stream_write(raw_reader_mem, &short_test_wav[sent], chunk);
+        sent += chunk;
+
+        int rec_bytes = raw_stream_read(raw_reader_in, record_buf, chunk);
+        if (rec_bytes > 0) {
+            compare_audio_buffers(&short_test_wav[sent - chunk], record_buf, rec_bytes, 5);
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+
+    // Cleanup
+    audio_pipeline_stop(pipeline_play);
+    audio_pipeline_wait_for_stop(pipeline_play);
+    audio_pipeline_terminate(pipeline_play);
+
+    audio_pipeline_stop(pipeline_record);
+    audio_pipeline_wait_for_stop(pipeline_record);
+    audio_pipeline_terminate(pipeline_record);
+
+    audio_pipeline_unregister(pipeline_play, raw_reader_mem);
+    audio_pipeline_unregister(pipeline_play, wav_decoder);
+    audio_pipeline_unregister(pipeline_play, i2s_writer);
+    audio_pipeline_unregister(pipeline_record, i2s_reader);
+    audio_pipeline_unregister(pipeline_record, raw_reader_in);
+
+    audio_element_deinit(raw_reader_mem);
+    audio_element_deinit(wav_decoder);
+    audio_element_deinit(i2s_writer);
+    audio_element_deinit(i2s_reader);
+    audio_element_deinit(raw_reader_in);
+
+    audio_pipeline_deinit(pipeline_play);
+    audio_pipeline_deinit(pipeline_record);
+}
+
+void record_test() {
+
+}
+
 
 //MARK: Callback functions
 void select_mode_cb(void *arg, void *usr_data) {
@@ -192,7 +297,6 @@ void app_main(void) {
 }
 
 /*
-Flash leds when any input happens
 Led show output
 Reserve one led for mode
 
