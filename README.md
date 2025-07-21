@@ -18,7 +18,7 @@ When in output mode, the knob is used for volume.
 ## BOM
 
 | Item | Model | Qty | Price (USD) | Shipping | Link |
-|-|--|-|-|-|-|
+|-|-|-|-|-|-|
 | Audio Codec | ES8388 | 1 | $2.51 | $9.34 USD | [Link](https://lcsc.com/product-detail/ADCs-DACs-Special-Purpose_Everest-semi-Everest-Semiconductor-ES8388_C365736.html) |
 | Audio Transformer | HR610660 | 2 | $1.03 | '' | [Link](https://lcsc.com/product-detail/Audio-Transformers_HANRUN-Zhongshan-HanRun-Elec-HR610660_C48357.html) |
 | XLR3 Male | NC3MAAH | 1 | $1.57 | '' | [Link](https://lcsc.com/product-detail/XLR-Cannon-Connectors_Neutrik-NC3MAAH_C368463.html) |
@@ -28,13 +28,14 @@ When in output mode, the knob is used for volume.
 | Slide Switch (SP3T) | SK13D07VG5 | 1 | $0.66 | '' | [Link](https://lcsc.com/product-detail/Slide-Switches_SHOU-HAN-SK13D07VG5_C393948.html) |
 | Microcontroller | ESP32-S3-Zero | 1 | $6.06 | Free | [Link](https://core-electronics.com.au/esp32-s3-mini-development-board-retired.html) |
 | LED Bar Graph | WS2812B | 1 | $3.19 | '' | [Link](https://core-electronics.com.au/glowbit-stick-1x8.html) |
+| Encoder Knob | ADA5093 | 1 | $1.17 | '' | [Link](https://core-electronics.com.au/slim-rubber-rotary-encoder-knob-11-5mm-x-14-5mm-d-shaft.html) |
 | PCB (JLCPCB) | - | 5 | $2 | $16.59 AUD | [Link](https://jlcpcb.com) |
 | PCB Assembly (for ES8388) | - | 2 | $15.40 | '' | [Link](https://jlcpcb.com) |
 | Case (Print Legion) | - | 1 | $0 | $5 AUD | [Link](https://printlegion.hackclub.com) |
 
-**AUD Total:** $96.63
+**AUD Total:** $98.46
 
-**USD Total:** $61.21
+**USD Total:** $62.35
 
 ## Background
 I run sound at my school, and we have a legacy system, set up who knows how many years ago. As part of that, there are lots of XLR3 cables lying around that nobody knows if they work, or not.
@@ -48,5 +49,4 @@ So, when I heard about Hackclub's *Highway* YSWS, my mind immediately jumped to 
 ![Case Assembly](screenshots/case-exploded.png)
 
 ## Additional Details
-- I'm using a 14mmx55mmx2mm transparent acrylic sheet istead of the window print.
-- The encoder knob can be sourced from https://grabcad.com/library/potentiometer-knob-4
+- I'm using a 14mmx55mmx2mm transparent acrylic sheet instead of the window print.
