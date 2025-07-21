@@ -24,17 +24,17 @@ When in output mode, the knob is used for volume.
 | XLR3 Male | NC3MAAH | 1 | $1.57 | '' | [Link](https://lcsc.com/product-detail/XLR-Cannon-Connectors_Neutrik-NC3MAAH_C368463.html) |
 | XLR3 Female | NC3FAAH | 1 | $1.43 | '' | [Link](https://lcsc.com/product-detail/XLR-Cannon-Connectors_Neutrik-NC3FAAH_C368521.html) |
 | Audio Jack | PJ-306M | 1 | $1.14 | '' | [Link](https://lcsc.com/product-detail/Audio-Connectors_HOOYA-PJ-306M_C2939172.html) |
+| Rotary Encoder w/ Button | PEC11R-4220F-S0024 | 1 | $2.80  | '' | [Link](https://lcsc.com/product-detail/Rotary-Encoders_BOURNS-PEC11R-4220F-S0024_C143797.html) |
 | Slide Switch (SP3T) | SK13D07VG5 | 1 | $0.66 | '' | [Link](https://lcsc.com/product-detail/Slide-Switches_SHOU-HAN-SK13D07VG5_C393948.html) |
-| Microcontroller | ESP32-S3-Zero | 1 | $6.10 | Free | [Link](https://core-electronics.com.au/esp32-s3-mini-development-board-retired.html) |
-| Rotary Encoder w/ Button | PEC11-4215F-S24 | 1 | $6.53 | '' | [Link](https://core-electronics.com.au/rotary-encoder-extras.html) |
-| LED Bar Graph | WS2812B | 1 | $3.22 | '' | [Link](https://core-electronics.com.au/glowbit-stick-1x8.html) |
-| PCB (JLCPCB) | - | 5 | $5.4 | $16.59 AUD | [Link](https://jlcpcb.com) |
-| PCB Assembly (for ES8388) | - | 2 | $15.40 | $16.59 AUD | [Link](https://jlcpcb.com) |
-| Case (JLC3DP) | - | 1 | $14.88 | '' | [Link](https://jlc3dp.com) |
+| Microcontroller | ESP32-S3-Zero | 1 | $6.06 | Free | [Link](https://core-electronics.com.au/esp32-s3-mini-development-board-retired.html) |
+| LED Bar Graph | WS2812B | 1 | $3.19 | '' | [Link](https://core-electronics.com.au/glowbit-stick-1x8.html) |
+| PCB (JLCPCB) | - | 5 | $2 | $16.59 AUD | [Link](https://jlcpcb.com) |
+| PCB Assembly (for ES8388) | - | 2 | $15.40 | '' | [Link](https://jlcpcb.com) |
+| Case (Print Legion) | - | 1 | $0 | $5 AUD | [Link](https://printlegion.hackclub.com) |
 
-**AUD Total:** $121.95
+**AUD Total:** $96.63
 
-**USD Total:** $80.08
+**USD Total:** $61.21
 
 ## Background
 I run sound at my school, and we have a legacy system, set up who knows how many years ago. As part of that, there are lots of XLR3 cables lying around that nobody knows if they work, or not.
@@ -46,4 +46,3 @@ So, when I heard about Hackclub's *Highway* YSWS, my mind immediately jumped to 
 ![PCB](screenshots/pcb.png)
 ![Schematic](screenshots/schematic.png)
 ![Case Assembly](screenshots/case-exploded.png)
-
