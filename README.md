@@ -46,3 +46,7 @@ So, when I heard about Hackclub's *Highway* YSWS, my mind immediately jumped to 
 ![PCB](screenshots/pcb.png)
 ![Schematic](screenshots/schematic.png)
 ![Case Assembly](screenshots/case-exploded.png)
+
+## Additional Details
+- I'm using a 14mmx55mmx2mm transparent acrylic sheet istead of the window print.
+- The encoder knob can be sourced from https://grabcad.com/library/potentiometer-knob-4
